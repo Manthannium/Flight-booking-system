@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Signin Page</title>
+
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+	/* background: url(https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80) no-repeat center center fixed; */
+	background-size:cover;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	margin: 0;
+	color: #666;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 10vh;
+  /* background-image: url(https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80); */
+  background-size:cover;
+  font-family: sans-serif;
+  font-size:20px;
+  
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  height: 310px;
+  margin: 6rem auto 8.1rem auto;
+  width: 310px;
+  
+}
+.main_content{
+  font-family: Brush Script MT ;
+  color : black;
+  font-size: 23px;;
+  font-weight:bold;
+  letter-spacing: 4px;
+  padding-bottom: 23px;
+  padding-top: 13px;
+  text-align: center;
+ 
+
+}
+.content{
+  padding:5px;
+  border-radius: 4px;
+  border: 1px solid black;
+  width: 60%;
+  font-size: 10px;
+  text-align: center;
+  
+}
+.content-button{
+  width: 60%;
+  background-color: antiquewhite;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 5px;
+
+}
+</style>
+</head>
+
+<body>
+	<div class ="main">
+    <div class ="main_content">
+      <h4>Login to your account</h4>
+      
+      <form action="/signin" method="POST">
+        {% csrf_token %}
+        <div class= "content2">
+          <label for="username">Username</label>
+          <br>
+          <input type="text" name="username" id="username" class="content">
+          <br>
+          <label for="password">Password</label>
+          <br>
+          <input type="password" name="passw" id="fname" class="content">
+        <br>
+        <hr>
+          <button type="submit" class="content-button" >submit</button>
+        </div>
+        
+    </div>
+    
+
+  </form>
+  <br/>
+  </div>
+            
+			
+	
+</body>
+
+</html>
