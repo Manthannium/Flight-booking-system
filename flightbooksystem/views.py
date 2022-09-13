@@ -20,9 +20,6 @@ from reportlab.lib.pagesizes import letter
 
 # Create your views here.
 def home(request):
-    # for i in range(20):
-    #     r = seat.objects.create(seat_number=i)
-    #     r.save()
     return render(request,"index.html")
 
 def signup(request):
